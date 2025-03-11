@@ -6,16 +6,16 @@ import TranslationTypes from "./types/translationTypes";
 const files = ["common", "homepage"];
 
 const resources = {};
-Object.values(TranslationTypes).forEach(({ abbreviation }) => {
-  resources[abbreviation] = {}; // Initialize language namespace
+Object.entries(TranslationTypes).forEach(([lang,language]) => {
+  resources[lang] = {}; // Initialize language namespace
 
   files.forEach((file) => {
-    import(`./locales/${abbreviation}/${file}.json`)
+    import(`./locales/${lang}/${file}.json`)
       .then((module) => {
-        resources[abbreviation][file] = module.default;
+        resources[lang][file] = module.default;
       })
       .catch((error) => {
-        console.error(`Error loading ${file}.json for language: ${abbreviation}`, error);
+        console.error(`Error loading ${file}.json for language: ${language}`, error);
       });
   });
 });
@@ -27,7 +27,7 @@ i18n
     resources,
     fallbackLng: "en", // Default language
     detection: {
-      order: ["navigator", "localStorage", "cookie"], // Detect language from browser, storage, or cookies
+      order: ["localStorage", "cookie", "sessionStorage"], // Detect language from browser, storage, or cookies
       caches: ["localStorage", "cookie"]
     },
     interpolation: {

@@ -167,13 +167,14 @@ function Header ({ profile }) {
       <button
         className="loginButton"
         onClick={() => { onOpenAuthModal("Login") }}
-        >Login
+        >
+        {t("nav.login")}
       </button>
 
       <button
         className="signUpButton bg-[var(--primary-color)]"
         onClick={() => { onOpenAuthModal("Sign Up") }}
-        >Sign up
+        >{t("nav.signUp")}
       </button>
 
       <AuthModal

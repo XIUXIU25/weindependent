@@ -1,7 +1,7 @@
 import "./i18n"; // Import i18n config
 import { useTranslation } from "react-i18next"; // Import translation hook
 
-import React, { useState } from "react"
+import React, { useState ,useEffect} from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -21,7 +21,13 @@ import DonatePage from "./pages/DonatePage"
 
 function App () {
   // const [currentPage, setCurrentPage] = useState("home");
-  const { t } = useTranslation(); // Load translation function
+  const { t, i18n } = useTranslation(); // Load translation function
+
+
+  if (!i18n.isInitialized) {
+    return <div>Loading...</div>; // Prevents translation issues during initialization
+  }
+
 
   const [events, setEvents] = useState([
     { id: 1, name: "Tesla Model S", type: "electric", price: "79,990", image: "/img/models.jpg" },
@@ -53,8 +59,11 @@ function App () {
     isCarFree: false,
   })
   const [modalVisible, setModalVisible] = useState(false)
+
+
   return (
     <Router>
+      
       <div className="app">
         <Header profile={profile} />
 
@@ -71,6 +80,7 @@ function App () {
             {/* <Route path="/login" element={<AuthModal />} /> */}
             {/* <Route path="/register" element={<AuthModal />} /> */}
           </Routes>
+          
 
         </main>
 
@@ -78,7 +88,9 @@ function App () {
         {/*  */}
 
       </div>
+      
     </Router>
+    
 
     // <div className="app">
     //   <Header navigateTo={setCurrentPage} currentPage={currentPage} profile={profile} />

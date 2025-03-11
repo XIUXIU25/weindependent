@@ -6,27 +6,25 @@ import { TranslationTypes } from "../types/translationTypes";
 
 const LanguageBtn = () => {
   const [isDropdownclicked, setIsDropdownclicked] = useState(false);
-  const { t, i18n } = useTranslation("common"); // ✅ Load translations
-  const [lang, setLang] = useState(TranslationTypes.ENGLISH);
+  const { i18n } = useTranslation(); 
 
-  const changeLanguage = async (language) => {
-    setLang(language);
-    console.log("Changing language to:", language);
-    await i18n.changeLanguage(language.abbreviation);
-    console.log("Language changed successfully to:", i18n.language);
-    setIsDropdownclicked(false); // Close dropdown after selection
+
+  const changeLanguage = async (lang) => {
+    await i18n.changeLanguage(lang);
+    console.log("Language changed to:", i18n.language);
+    setIsDropdownclicked(false); 
   };
 
   const dropDownMenu = () => {
     return (
       <ul className="submenu absolute">
-        {Object.values(TranslationTypes).map((language) => (
-          <li key={language.abbreviation}>
+        {Object.entries(TranslationTypes).map(([lang, language]) => (
+          <li key={lang}>
             <button
               className="submenu-item"
-              onClick={() => changeLanguage(language)}
+              onClick={() => changeLanguage(lang)}
             >
-              {language.fullName}
+              {language}
             </button>
           </li>
         ))}
@@ -46,7 +44,7 @@ const LanguageBtn = () => {
             alt="Language Icon"
             className="dropdown-icon"
           />
-          <span className="language-text">{lang.fullName}</span>
+          <span className="language-text">{TranslationTypes[i18n.language]}</span>
           <img
             src={DropdownIcon}
             alt="Expand language submenu"
