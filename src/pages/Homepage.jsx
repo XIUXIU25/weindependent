@@ -6,6 +6,7 @@
 
 // src/pages/Homepage.jsx
 import React, { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { useNavigate, Link } from "react-router-dom"
 // import '../styles/Homepage.css'
 import AuthModal from "../components/AuthModal"
@@ -36,6 +37,7 @@ import HomepageSupportButtonImage from "../assets/icon-logo/homepage-support-but
 import ArticleMarkIcon from "../assets/icon-logo/ArticleMarkIcon.svg"
 
 function HomePage() {
+  const { t } = useTranslation("homepage");
   const navigate = useNavigate(); //React Router navigate function
 
 
@@ -63,26 +65,24 @@ function HomePage() {
 
           {/* left Content */}
           <div className="col-span-6 md:col-span-6 flex flex-col justify-center">
-            <h1 className="text-[46px] text-[#FF5634]">Building Bridges for</h1>
-            <h1 className="text-[46px] text-[#FF5634]">Dependent Visa Holders</h1>
+            <h1 className="text-[46px] text-[#FF5634]">{t("homepage.hero.title1")}</h1>
+            <h1 className="text-[46px] text-[#FF5634]">{t("homepage.hero.title2")}</h1>
             <p className="mt-4">
-              <a className="text-[#FF5634]">We Independent </a>
-              help them build community, gain access to critical resources, and overcome social isolation.
-              Through this supportive environment, we empower them to regain their independence,
-              integrate into U.S. society.
+              <a className="text-[#FF5634]">{t("homepage.hero.descriptionHeading")} </a>
+              {t("homepage.hero.description")}
             </p>
 
             {/* Buttons Section */}
             <div className="hero-buttons">
-              <button className="signUpButton bg-[#FFEDDD] text-[#FF5634] hover:bg-[#F8F8F8]" onClick={() => { onOpenAuthModal("Sign Up") }}>Get Started</button>
-              <button className="donateButton bg-[#FF5634] text-[#FFFFFF] hover:text-[#000000] " onClick={() => navigate("/donate")}>Donate</button>
+              <button className="signUpButton bg-[#FFEDDD] text-[#FF5634] hover:bg-[#F8F8F8]" onClick={() => { onOpenAuthModal("Sign Up") }}>{t("homepage.hero.getStarted")}</button>
+              <button className="donateButton bg-[#FF5634] text-[#FFFFFF] hover:text-[#000000] " onClick={() => navigate("/donate")}>{t("homepage.hero.donate")}</button>
             </div>
 
 
             {/* Visa Info */}
-            <p className="text-black">Get to know more details about dependent visa holders</p>
+            <p className="text-black">{t("homepage.hero.visaInfo")}</p>
             <p className="text-[#FF5634] flex items-center gap-10">
-              J2 Visa  |  H4 Visa  |  O3 Visa  |  F2 Visa  |  ...
+            {t("homepage.hero.visaTypes")}
               <Link to="/visa-detail" className="text-[#FF5634]">
                 <img src={HomepageVisaLinkImage} alt="arrow" className="w-5 h-5" />
               </Link>
@@ -105,7 +105,7 @@ function HomePage() {
 
       {/* About Section */}
       <section id="about" className="col-span-12 grid grid-cols-subgrid gap-4">
-        <h3 className="col-span-12 text-2xl font-semibold text-left mb-6 text-[#FF5634]">About</h3>
+        <h3 className="col-span-12 text-2xl font-semibold text-left mb-6 text-[#FF5634]">{t("homepage.about.title")}</h3>
         <div className="col-span-12 grid grid-cols-12 gap-4">
           <div className="col-span-6 items-center md:items-start gap-8 py-8">
             <img src={HomepageAboutImage} alt="About" className="rounded-lg w-full" />
@@ -113,14 +113,10 @@ function HomePage() {
           <div className="col-span-6 text-left flex flex-col justify-between">
             <div>
               <p className="mt-4 text-[var(--primary-color)]">
-                <a className="text-semibold">We Independent </a>
-                is a 501c3 nonprofit organization
-                dedicated to embracing and supporting dependent visa holders, especially women,
-                by helping them build connections, access essential resources,
-                and feel valued in their new communities.
+                <a className="text-semibold">{t("homepage.about.descriptionHeading")}</a>
+                {t("homepage.about.description")}
               </p>
-              <p className="mt-4 text-gray-600">Together, we create a bridge
-                towards independence and belonging.
+              <p className="mt-4 text-gray-600">{t("homepage.about.mission")}
               </p>
             </div>
 
@@ -128,7 +124,7 @@ function HomePage() {
               <button className="mb-auto bg-[#FF5634] text-[#FFFFFF] px-4 py-2 rounded-lg hover:bg-[#FFEDDD] hover:text-[#FF5634]"
                 onClick={() => navigate("/about")}
               >
-                Learn More
+                {t("homepage.about.learnMore")}
               </button>
             </div>
           </div>
@@ -137,9 +133,8 @@ function HomePage() {
 
       <section className="homepage-cards col-span-12">
         <div className="col-span-12 grid grid-cols-subgrid items-center">
-          <h2 className="col-span-12 text-5xl font-semibold mb-6 text-center text-[#FF5634]">We are here to support, uplift, and guide</h2>
-          <p className="col-span-8 col-end-11 mt-4">At We Independent, we are committed to empowering dependent visa holders
-            by providing support across 4 key areas to help them thrive in their new environment
+          <h2 className="col-span-12 text-5xl font-semibold mb-6 text-center text-[#FF5634]">{t("homepage.support.title")}</h2>
+          <p className="col-span-8 col-end-11 mt-4">{t("homepage.support.description")}
           </p>
         </div>
 
@@ -149,36 +144,36 @@ function HomePage() {
               <CardContent className="flex flex-col justify-between  h-full w-full">
                 <img src={HomepageCardBackgroundImage1} alt="Logo" className="w-16 h-16 mb-4" />
 
-                <h2 className="text-2xl font-semibold  text-center pd-4 ">Adapting to</h2>
-                <h2 className="text-2xl font-semibold  text-center pd-4 ">Life in the U.S.</h2>
+                <h2 className="text-2xl font-semibold  text-center pd-4 ">{t("homepage.support.categories.life")}</h2>
+                <h2 className="text-2xl font-semibold  text-center pd-4 ">{t("homepage.support.categories.life2")}</h2>
               </CardContent>
             </Card>
             <Card className="col-span-3 p-6 shadow-lg bg-[#FFEDDD]">
               <CardContent className="flex flex-col items-center">
                 <img src={HomepageCardBackgroundImage2} alt="Logo" className="w-16 h-16 mb-4" />
-                <h2 className="text-2xl font-semibold mb-6 text-center">Visa & Policy</h2>
-                <h2 className="text-2xl font-semibold mb-6 text-center">Guidance</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-center">{t("homepage.support.categories.visa1")}</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-center">{t("homepage.support.categories.visa2")}</h2>
               </CardContent>
             </Card>
             <Card className="col-span-3 p-6 shadow-lg bg-white">
               <CardContent className="flex flex-col items-center">
                 <img src={HomepageCardBackgroundImage1} alt="Logo" className="w-16 h-16 mb-4" />
-                <h2 className="text-2xl font-semibold mb-6 text-center"> Overcoming</h2>
-                <h2 className="text-2xl font-semibold mb-6 text-center"> Language Barriers</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-center">{t("homepage.support.categories.language1")}</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-center">{t("homepage.support.categories.language2")}</h2>
               </CardContent>
             </Card>
             <Card className="col-span-3 p-6 shadow-lg bg-[#FFEDDD]">
               <CardContent className="flex flex-col items-center">
                 <img src={HomepageCardBackgroundImage2} alt="Logo" className="w-16 h-16 mb-4" />
-                <h2 className="text-2xl font-semibold mb-6 text-center"> Well-Being & </h2>
-                <h2 className="text-2xl font-semibold mb-6 text-center"> Self-Development</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-center"> {t("homepage.support.categories.wellbeing1")}</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-center"> {t("homepage.support.categories.wellbeing2")}</h2>
               </CardContent>
             </Card>
 
             <Card className="col-span-12 p-6 shadow-lg bg-[#FFEDDD]">
               <CardContent className="flex flex-col">
-                <h2 className="text-2xl font-semibold mb-6 text-center">"  In WE INDEPENDENT</h2>
-                <h2 className="text-2xl font-semibold mb-6 text-center"> I find my community and value here  "</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-center">{t("homepage.support.testimonial1")}</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-center">{t("homepage.support.testimonial2")}</h2>
               </CardContent>
             </Card>
           </div>
@@ -189,10 +184,10 @@ function HomePage() {
       <section id="support-program" className="col-span-12 grid grid-cols-12 gap-8 py-16 px-6 bg-white">
         {/* Title - Support Program Text */}
         <div className="col-span-12">
-          <h3 className="text-[#FF5634] text-lg font-semibold mb-2">Support program</h3>
+          <h3 className="text-[#FF5634] text-lg font-semibold mb-2">{t("homepage.supportProgram.title")}</h3>
           <h1 className="text-4xl font-semibold text-left mb-6 leading-tight">
-            Your Journey Starts Here: <br />
-            Find <span className="text-[#FF5634]">1- on-1 Free</span> Support You Need
+          {t("homepage.supportProgram.subtitle1")}<br />
+          {t("homepage.supportProgram.subtitle2")} <span className="text-[#FF5634]">{t("homepage.supportProgram.subtitle3")}</span> {t("homepage.supportProgram.subtitle4")}
           </h1>
         </div>
 
@@ -200,33 +195,29 @@ function HomePage() {
           <div className="col-span-6 flex flex-col gap-12">
             {/* Support Cards */}
             <SupportProgramCard
-              title="English Support"
-              description="Your Gateway to English Success. Find nearby ESL classes, access valuable learning resources, and connect with our community of English learners."
+              title={t("homepage.supportProgram.programs.english.title")}
+              description={t("homepage.supportProgram.programs.english.description")}
               imageUrl={HomepageSupportButtonImage}
               altText="Go"
               link="/support-program/english-support"
             />
             <SupportProgramCard
-              title="Career Compass"
-              description="Your Gateway to English Success. Find nearby ESL classes, access valuable learning resources, and connect with our community of English learners."
+              title={t("homepage.supportProgram.programs.career.title")}
+              description={t("homepage.supportProgram.programs.career.description")}
               imageUrl={HomepageSupportButtonImage}
               altText="Go"
               link="/support-program/career-compass"
             />
             <SupportProgramCard
-              title="Legal Consulting"
-              description="Navigating the complexities of U.S. 
-              law? Our expert team provides clear and concise legal 
-              and policy guidance to help you make informed decisions."
+              title={t("homepage.supportProgram.programs.legal.title")}
+              description={t("homepage.supportProgram.programs.legal.description")}
               imageUrl={HomepageSupportButtonImage}
               altText="Go"
               link="/support-program/legal-consulting"
             />
             <SupportProgramCard
-              title="Mental Wellbeing Counseling"
-              description="Free Mental Wellbeing Counseling. 
-              Our experienced therapists help you navigate life in the US, 
-              address emotional challenges, and build resilience."
+              title={t("homepage.supportProgram.programs.mentalHealth.title")}
+              description={t("homepage.supportProgram.programs.mentalHealth.description")}
               imageUrl={HomepageSupportButtonImage}
               altText="Go"
               link="/support-program/mental-health-counseling"
@@ -245,14 +236,14 @@ function HomePage() {
       <section id="events" className="col-span-12 max-w-7xl mx-auto py-16 px-4 ">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h3 className="text-[#FF5634] text-lg font-semibold mb-2 text-center">Events</h3>
+          <h3 className="text-[#FF5634] text-lg font-semibold mb-2 text-center">{t("homepage.events.title")}</h3>
           <h1 className="text-4xl font-semibold text-center leading-tight">
-            Together, we are creating a bridge to <br />
-            <span className="text-[#FF5634]">independence and belonging</span>
+          {t("homepage.events.subtitle")} <br />
+            <span className="text-[#FF5634]">{t("homepage.events.description")}</span>
           </h1>
 
           <a href="/events" className="inline-flex items-center text-gray-800 hover:text-[#FF5634]">
-            View all events <span className="ml-2">→</span>
+          {t("homepage.events.viewAll")} <span className="ml-2">→</span>
           </a>
         </div>
 
@@ -293,18 +284,16 @@ function HomePage() {
       {/* Blog Section */}
       <section id="Blog" className="col-span-12 grid grid-cols-subgrid gap-4">
         <div className="col-span-7 text-left">
-          <h3 className="text-[#FF5634] text-lg font-semibold mb-2 text-left">Blog</h3>
+          <h3 className="text-[#FF5634] text-lg font-semibold mb-2 text-left">{t("homepage.blog.title")}</h3>
           <h1 className="text-4xl font-semibold text-left leading-tight">
-            Explore
+          {t("homepage.blog.subtitle1")}
             <span className="text-[#FF5634]">
-              timely articles and essential <br />
-              resources
+            {t("homepage.blog.subtitle2")}
             </span>
-            to navigate new  <br />
-            environment with confidence and ease
+            {t("homepage.blog.viewAll")}
           </h1>
           <a href="/blogs" className="hover:text-[#FF5634]">
-            View all blogs <span className="ml-2">→</span>
+          {t("homepage.blog.subtitle3")} <span className="ml-2">→</span>
           </a>
         </div>
 
@@ -314,19 +303,19 @@ function HomePage() {
               href="/blogs/visa-policy"
               className="px-4 py-2 rounded-full bg-[#FFEDDD] border border-none hover:text-[#FF5634] transition-colors"
             >
-              Visa & Policy
+              {t("homepage.blog.categories.visaPolicy")}
             </Link>
             <Link
               href="/blogs/us-living-guide"
               className="px-4 py-2 rounded-full bg-[#FFEDDD] border border-none hover:text-[#FF5634] transition-colors"
             >
-              US Living Guide
+              {t("homepage.blog.categories.usLivingGuide")}
             </Link>
             <Link
               href="/blogs/career-compass"
               className="px-4 py-2 rounded-full bg-[#FFEDDD] border border-none hover:text-[#FF5634] transition-colors"
             >
-              Career compass
+              {t("homepage.blog.categories.careerCompass")}
             </Link>
           </div>
           <div>
@@ -334,19 +323,19 @@ function HomePage() {
               href="/blogs/health-wellness"
               className="px-4 py-2 rounded-full bg-[#FFEDDD] border border-none hover:text-[#FF5634] transition-colors"
             >
-              Health & Wellness
+              {t("homepage.blog.categories.healthWellness")}
             </Link>
             <Link
               href="/blogs/community-story"
               className="px-4 py-2 rounded-full bg-[#FFEDDD] border border-none hover:text-[#FF5634] transition-colors"
             >
-              Community story
+              {t("homepage.blog.categories.communityStory")}
             </Link>
           </div>
         </div>
         {/* Blog Cards */}
         <div className="col-span-12 grid grid-cols-subgrid gap-4">
-          <p className="col-span-12">Must-Read Articles</p>
+          <p className="col-span-12">{t("homepage.blog.mustRead")}</p>
           <div className="col-span-4">
             <BlogCard
               title="US Living Guide"

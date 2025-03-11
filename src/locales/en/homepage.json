@@ -1,0 +1,88 @@
+{
+    "homepage": {
+      "hero": {
+        "title1": "Building Bridges for",
+        "title2": "Dependent Visa Holders",
+        "descriptionHeading":"We Independent ",
+        "description": "helps them build community, gain access to critical resources, and overcome social isolation. Through this supportive environment, we empower them to regain their independence, integrate into U.S. society.",
+        "getStarted": "Get Started",
+        "donate": "Donate",
+        "visaInfo": "Get to know more details about dependent visa holders",
+        "visaTypes": "J2 Visa | H4 Visa | O3 Visa | F2 Visa | ..."
+      },
+      "about": {
+        "title": "About",
+        "descriptionHeading":"We Independent ",
+        "description": "is a 501c3 nonprofit organization dedicated to embracing and supporting dependent visa holders, especially women, by helping them build connections, access essential resources, and feel valued in their new communities.",
+        "mission": "Together, we create a bridge towards independence and belonging.",
+        "learnMore": "Learn More"
+      },
+      "support": {
+        "title": "We are here to support, uplift, and guide",
+        "description": "At We Independent, we are committed to empowering dependent visa holders by providing support across 4 key areas to help them thrive in their new environment",
+        "categories": {
+          "life": "Adapting to",
+          "life2": "Life in the U.S.",
+          "visa1": "Visa & Policy",
+          "visa2": "Guidance",
+          "language1": "Overcoming",
+          "language2": "Language Barriers",
+          "wellbeing1": "Well-Being",
+          "wellbeing2": "Self-Development"
+        },
+        "testimonial1": "\"In WE INDEPENDENT",
+        "testimonial2": "I find my community and value here\""
+      },
+      "supportProgram": {
+        "title": "Support Program",
+        "subtitle1": "Your Journey Starts Here:",
+        "subtitle2":"Find",
+        "subtitle3":"1-on-1 Free",
+        "subtitle4":"Support You Need",
+        "programs": {
+          "english": {
+            "title": "English Support",
+            "description": "Your Gateway to English Success. Find nearby ESL classes, access valuable learning resources, and connect with our community of English learners."
+          },
+          "career": {
+            "title": "Career Compass",
+            "description": "Your Gateway to English Success. Find nearby ESL classes, access valuable learning resources, and connect with our community of English learners."
+          },
+          "legal": {
+            "title": "Legal Consulting",
+            "description": "Navigating the complexities of U.S. law? Our expert team provides clear and concise legal and policy guidance to help you make informed decisions."
+          },
+          "mentalHealth": {
+            "title": "Mental Wellbeing Counseling",
+            "description": "Free Mental Wellbeing Counseling. Our experienced therapists help you navigate life in the US, address emotional challenges, and build resilience."
+          }
+        }
+      },
+      "events": {
+        "title": "Events",
+        "subtitle": "Together, we are creating a bridge to independence and belonging",
+        "description":"independence and belonging",
+        "viewAll": "View all events"
+      },
+      "blog": {
+        "title": "Blog",
+        "subtitle1": "Explore",
+        "subtitle2": "timely articles and essential resources",
+        "subtitle3": "to navigate a new environment with confidence and ease",
+        "viewAll": "View all blogs",
+        "categories": {
+          "visaPolicy": "Visa & Policy",
+          "usLivingGuide": "US Living Guide",
+          "careerCompass": "Career Compass",
+          "healthWellness": "Health & Wellness",
+          "communityStory": "Community Story"
+        },
+        "mustRead": "Must-Read Articles"
+      },
+      "supportUs": {
+        "title": "Support Us",
+        "becomeMember": "Become a Member",
+        "membershipDescription": "Celebrate, empower, and inspire each other to take charge and make a difference."
+      }
+    }
+  }

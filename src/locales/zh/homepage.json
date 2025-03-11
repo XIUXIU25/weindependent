@@ -1,0 +1,88 @@
+{
+    "homepage": {
+      "hero": {
+        "title1": "为附属签证持有人",
+        "title2": "建立桥梁",
+        "descriptionHeading": "We Independent",
+        "description": "帮助他们建立社区，获得重要资源，并克服社会孤立。通过这一支持环境，我们赋予他们重新获得独立性并融入美国社会的能力。",
+        "getStarted": "开始",
+        "donate": "捐赠",
+        "visaInfo": "了解更多关于附属签证持有人的信息",
+        "visaTypes": "J2签证 | H4签证 | O3签证 | F2签证 | ..."
+      },
+      "about": {
+        "title": "关于我们",
+        "descriptionHeading": "We Independent",
+        "description": "是一家 501c3 非营利组织，致力于接纳和支持附属签证持有者，特别是女性，帮助她们建立联系，获取重要资源，并在新的社区中感受到自己的价值。",
+        "mission": "我们携手共建通往独立与归属感的桥梁。",
+        "learnMore": "了解更多"
+      },
+      "support": {
+        "title": "我们在这里提供支持、提升和引导",
+        "description": "在 We Independent，我们致力于通过四个关键领域提供支持，帮助附属签证持有者在新的环境中茁壮成长。",
+        "categories": {
+          "life": "适应",
+          "life2": "美国生活",
+          "visa1": "签证与政策",
+          "visa2": "指导",
+          "language1": "克服",
+          "language2": "语言障碍",
+          "wellbeing1": "身心健康",
+          "wellbeing2": "自我发展"
+        },
+         "testimonial1": "\"在 WE INDEPENDENT",
+          "testimonial2": "我找到了我的社区和价值\""
+      },
+      "supportProgram": {
+        "title": "支持计划",
+        "subtitle1": "你的旅程从这里开始：",
+        "subtitle2": "查找",
+        "subtitle3": "1对1免费",
+        "subtitle4": "支持服务",
+        "programs": {
+          "english": {
+            "title": "英语支持",
+            "description": "你的英语成功之门。查找附近的 ESL 课程，访问有价值的学习资源，并与我们的英语学习者社区建立联系。"
+          },
+          "career": {
+            "title": "职业导航",
+            "description": "找到适合你的职业发展方向，获取就业资源，并提升个人技能。"
+          },
+          "legal": {
+            "title": "法律咨询",
+            "description": "在美国法律体系中导航？我们的专家团队提供清晰的法律与政策指导，帮助你做出明智决定。"
+          },
+          "mentalHealth": {
+            "title": "心理健康咨询",
+            "description": "提供免费的心理健康咨询。我们的专业心理咨询师帮助你适应美国生活，应对情绪挑战，并建立心理韧性。"
+          }
+        }
+      },
+      "events": {
+        "title": "活动",
+        "subtitle": "携手共创通往独立与归属感的桥梁",
+        "description": "独立与归属感",
+        "viewAll": "查看所有活动"
+      },
+      "blog": {
+        "title": "博客",
+        "subtitle1": "探索",
+        "subtitle2": "及时的文章和重要资源",
+        "subtitle3": "帮助你自信轻松地适应新环境",
+        "viewAll": "查看所有博客",
+        "categories": {
+          "visaPolicy": "签证与政策",
+          "usLivingGuide": "美国生活指南",
+          "careerCompass": "职业指南",
+          "healthWellness": "健康与保健",
+          "communityStory": "社区故事"
+        },
+        "mustRead": "必读文章"
+      },
+      "supportUs": {
+        "title": "支持我们",
+        "becomeMember": "成为会员",
+        "membershipDescription": "庆祝、赋能、激励彼此，积极行动，带来改变。"
+      }
+    }
+  }

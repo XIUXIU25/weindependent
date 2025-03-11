@@ -1,3 +1,6 @@
+import "./i18n"; // Import i18n config
+import { useTranslation } from "react-i18next"; // Import translation hook
+
 import React, { useState } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
@@ -18,6 +21,7 @@ import DonatePage from "./pages/DonatePage"
 
 function App () {
   // const [currentPage, setCurrentPage] = useState("home");
+  const { t } = useTranslation(); // Load translation function
 
   const [events, setEvents] = useState([
     { id: 1, name: "Tesla Model S", type: "electric", price: "79,990", image: "/img/models.jpg" },
@@ -56,13 +60,13 @@ function App () {
 
         <main id="main-content">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/events" element={<Events events={events} />} />
-            <Route path="/add-events" element={<AddEvents addEvents={addEvents} />} />
-            <Route path="/blogs" element={<Blogs blogs={blogs} />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/profile" element={<ProfilePage profile={profile} setProfile={setProfile} />} />
-            <Route path="/donate" element={<DonatePage />} />
+            <Route path="/" element={<HomePage title={t("nav.home")}/>} />
+            <Route path="/events" element={<Events title={t("nav.events")} events={events} />} />
+            <Route path="/add-events" element={<AddEvents title={t("nav.addEvents")} addEvents={addEvents} />} />
+            <Route path="/blogs" element={<Blogs title={t("nav.blogs")} blogs={blogs} />} />
+            <Route path="/about" element={<About title={t("nav.about")} />} />
+            <Route path="/profile" element={<ProfilePage title={t("nav.profile")} profile={profile} setProfile={setProfile} />} />
+            <Route path="/donate" element={<DonatePage title={t("nav.donate")} />} />
             {/* As login/register modal is component not SPA, we prefer not include them in router list */}
             {/* <Route path="/login" element={<AuthModal />} /> */}
             {/* <Route path="/register" element={<AuthModal />} /> */}

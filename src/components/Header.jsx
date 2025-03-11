@@ -1,10 +1,4 @@
-/*
- * Author: Xingxing Xiao
- * Created: Tue Feb 20 2025
- * Updated: Tue Mar 3 2025
- */
 
-// src/components/Header.jsx
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"; 
@@ -13,17 +7,18 @@ import "../styles/Header.css"
 // import ProfileIcon from "../assets/icon-logo/profile-icon.svg"
 import Logo_header from "../assets/icon-logo/We-Independent-Logo-header.svg"
 import DropdownIcon from "../assets/icon-logo/dropdown-icon.svg"
-import LanguageIcon from "../assets/icon-logo/language-icon.svg"
+
 
 import AuthModal from "./AuthModal"
+import LanguageBtn from "./LanguageBtn";
 
 function Header ({ profile }) {
   const navigate = useNavigate()
   const [isDropdownOpen, setDropdownOpen] = useState(false)
-  const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false)
-  const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false)
   const [openSubMenu, setOpenSubMenu] = useState(null)
-  const [openLanguageSubMenu, setOpenLanguageSubMenu] = useState(null)
+  const { t, i18n } = useTranslation("common"); // ✅ Load translations
+
+
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen)
@@ -39,13 +34,9 @@ function Header ({ profile }) {
     setOpenSubMenu(openSubMenu === itemName ? null : itemName)
   }
 
-  const toggleLanguageDropdown = () => {
-    setLanguageDropdownOpen(!isLanguageDropdownOpen)
-  }
 
-  const toggleLanguageSubmenu = (itemName) => {
-    setOpenLanguageSubMenu(openLanguageSubMenu === itemName ? null : itemName)
-  }
+
+
 
   // ---------------- Auth Modal State Management ----------------
   const [modalVisible, setModalVisible] = useState(false)
@@ -64,7 +55,7 @@ function Header ({ profile }) {
   // --------------- End Auth Modal State Management ---------------
   const menuItems = [
     {
-      name: "Support Programs",
+      name: t("nav.support"), // 🔴 CHANGE HERE
       path: "/support",
       subMenu: [
         { name: "Language Support", path: "/support/english-support" },
@@ -73,24 +64,14 @@ function Header ({ profile }) {
         { name: "Mental Health Conseling", path: "/support/mental-health" },
       ],
     },
-    { name: "Blogs", path: "/blogs" },
-    { name: "Events", path: "/events" },
+    { name: t("nav.blogs"), path: "/blogs" }, // 🔴 CHANGE HERE
+    { name: t("nav.events"), path: "/events" }, // 🔴 CHANGE HERE
     // { name: "Add Your Events", path: "/add-events" },
-    { name: "About", path: "/about" },
-    { name: "Donate", path: "/donate" },
+    { name: t("nav.about"), path: "/about" }, // 🔴 CHANGE HERE
+    { name: t("nav.donate"), path: "/donate" }, // 🔴 CHANGE HERE
   ]
 
-  const languageItems = [
-    {
-      name: "English", 
-      path: "/translate",
-      subLanguage: [
-        { name: "English", path: "/translate" },
-        { name: "简体中文", path: "/translate/chinese" },
-        { name: "Español", path: "/translate/spanish" },
-      ],
-    },
-  ]
+
     
 
   return (
@@ -106,47 +87,41 @@ function Header ({ profile }) {
       </div>
 
       <nav className="nav">
-        <ul className="full-nav">
-          {menuItems.map((item) => (
-            <li key={item.path} className="nav-item">
-              {item.subMenu ? (
-                <>
-                  <button className="menu-item" onClick={() => toggleSubmenu(item.name)}>
-                    <span className="menu-text">{item.name}</span>
-                    <img
-                      src={DropdownIcon}
-                      alt="Expand submenu"
-                      className={`dropdown-icon transition-transform duration-300 ease-in-out ${
-                        openSubMenu === item.name ? 'transform rotate-180' : ''
-                      }`}
-                    />
+      <ul className="full-nav">
+  {menuItems.map((item, index) => (
+    <li key={index} className="nav-item">  {/* ✅ Use index or item.path */}
+      {item.subMenu ? (
+        <>
+          <button className="menu-item" onClick={() => toggleSubmenu(item.name)}>
+            <span className="menu-text">{item.name}</span>
+            <img
+              src={DropdownIcon}
+              alt="Expand submenu"
+              className={`dropdown-icon transition-transform duration-300 ease-in-out ${
+                openSubMenu === item.name ? 'transform rotate-180' : ''
+              }`}
+            />
+          </button>
+          {openSubMenu === item.name && (
+            <ul className="submenu">
+              {item.subMenu.map((subItem, subIndex) => (  // ✅ Now subItem exists
+                <li key={subIndex}>  {/* ✅ Use subIndex as key */}
+                  <button className="submenu-item" onClick={() => navigate(subItem.path)}>
+                    {subItem.name}
                   </button>
-                  {openSubMenu === item.name && (
-                    <ul className="submenu">
-                      {item.subMenu.map((subItem) => (
-                        <li key={subItem.path}>
-                          <button
-                            className="submenu-item"
-                            onClick={() => navigate(subItem.path)}
-                          >
-                            {subItem.name}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </>
-              ) : (
-                <button
-                  className="menu-item"
-                  onClick={() => navigate(item.path)}
-                >
-                  {item.name}
-                </button>
-              )}
-            </li>
-          ))}
-        </ul>
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
+      ) : (
+        <button className="menu-item" onClick={() => navigate(item.path)}>
+          {item.name}
+        </button>
+      )}
+    </li>
+  ))}
+</ul>
 
 
         {/* Mobile Menu (Hamburger) */}
@@ -186,52 +161,7 @@ function Header ({ profile }) {
         )}
       </nav>
 
-      <ul className="language-nav border-1 border-[#D9D9D9] rounded-[40px]">
-          {languageItems.map((item) => (
-            <li key={item.path} className="language-item">
-              {item.subLanguage ? (
-                <>
-                  <button className="language-item flex items-center" onClick={() => toggleLanguageSubmenu(item.name)}>
-                    <img
-                        src={LanguageIcon}
-                        alt="Expand language submenu"
-                        className="dropdown-icon"
-                      />
-                    <span className="language-text">{item.name}</span>
-                    <img
-                      src={DropdownIcon}
-                      alt="Expand language Submenu"
-                      className={`dropdown-icon transition-transform duration-300 ease-in-out ${
-                        openLanguageSubMenu === item.name ? 'transform rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-                  {openLanguageSubMenu === item.name && (
-                    <ul className="submenu">
-                      {item.subLanguage.map((subItem) => (
-                        <li key={subItem.path}>
-                          <button
-                            className="submenu-item"
-                            onClick={() => navigate(subItem.path)}
-                          >
-                            {subItem.name}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </>
-              ) : (
-                <button
-                  className="menu-item"
-                  onClick={() => navigate(item.path)}
-                >
-                  {item.name}
-                </button>
-              )}
-            </li>
-          ))}
-        </ul>
+      <LanguageBtn/>
 
 
       <button

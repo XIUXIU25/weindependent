@@ -21,5 +21,14 @@
       "termsOfUse": "Client Terms of Use",
       "accessibility": "Digital Accessibility Statement",
       "copyright": "© WE INDEPENDENT 2025"
+    },
+    "nav": {
+      "home": "Home",
+      "events": "Events",
+      "addEvents": "Add Events",
+      "blogs": "Blogs",
+      "about": "About",
+      "profile": "Profile",
+      "donate": "Donate"
     }
   }

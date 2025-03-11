@@ -1,0 +1,84 @@
+{
+    "homepage": {
+      "hero": {
+        "title1": "Construyendo puentes para",
+        "title2": "Titulares de Visas Dependientes",
+        "descriptionHeading":"We Independent ",
+        "description": "les ayuda a construir comunidad, acceder a recursos esenciales y superar el aislamiento social. A través de este entorno de apoyo, los empoderamos para recuperar su independencia e integrarse en la sociedad estadounidense.",
+        "getStarted": "Comenzar",
+        "donate": "Donar",
+        "visaInfo": "Conozca más detalles sobre los titulares de visas dependientes",
+        "visaTypes": "Visa J2 | Visa H4 | Visa O3 | Visa F2 | ..."
+      },
+      "about": {
+        "title": "Acerca de",
+        "descriptionHeading":"We Independent ",
+        "description": "We Independent es una organización sin fines de lucro 501c3 dedicada a acoger y apoyar a los titulares de visas dependientes, especialmente a las mujeres, ayudándolas a construir conexiones, acceder a recursos esenciales y sentirse valoradas en sus nuevas comunidades.",
+        "mission": "Juntos, creamos un puente hacia la independencia y el sentido de pertenencia.",
+        "learnMore": "Aprender más"
+      },
+      "support": {
+        "title": "Estamos aquí para apoyar, elevar y guiar",
+        "description": "En We Independent, estamos comprometidos a empoderar a los titulares de visas dependientes brindando apoyo en 4 áreas clave para ayudarlos a prosperar en su nuevo entorno.",
+        "categories": {
+          "life": "Adaptándose a",
+          "life2": "la vida en EE.UU.",
+          "visa1": "Visas y Políticas",
+          "visa2": "Orientación",
+          "language1": "Superando",
+          "language2": "Barreras del Idioma",
+          "wellbeing1": "Bienestar",
+          "wellbeing2": "Desarrollo Personal"
+        },
+        "testimonial": "\"En WE INDEPENDENT encuentro mi comunidad y mi valor aquí\""
+      },
+      "supportProgram": {
+        "title": "Programa de Apoyo",
+        "subtitle1": "Tu viaje comienza aquí:",
+        "subtitle2": "Encuentra",
+        "subtitle3": "Apoyo Gratuito 1-a-1",
+        "subtitle4": "Que Necesitas",
+        "programs": {
+          "english": {
+            "title": "Apoyo en Inglés",
+            "description": "Tu puerta de entrada al éxito en inglés. Encuentra clases de ESL cercanas, accede a valiosos recursos de aprendizaje y conéctate con nuestra comunidad de estudiantes de inglés."
+          },
+          "career": {
+            "title": "Brújula Profesional",
+            "description": "Encuentra la dirección de tu desarrollo profesional, accede a recursos de empleo y mejora tus habilidades personales."
+          },
+          "legal": {
+            "title": "Consultoría Legal",
+            "description": "¿Navegando las complejidades de la ley estadounidense? Nuestro equipo de expertos proporciona orientación clara y concisa sobre leyes y políticas para ayudarte a tomar decisiones informadas."
+          },
+          "mentalHealth": {
+            "title": "Asesoramiento en Bienestar Mental",
+            "description": "Asesoramiento gratuito en bienestar mental. Nuestros terapeutas experimentados te ayudan a adaptarte a la vida en EE.UU., afrontar desafíos emocionales y desarrollar resiliencia."
+          }
+        }
+      },
+      "events": {
+        "title": "Eventos",
+        "subtitle": "Juntos, estamos creando un puente hacia la independencia y el sentido de pertenencia",
+        "viewAll": "Ver todos los eventos"
+      },
+      "blog": {
+        "title": "Blog",
+        "subtitle": "Explora artículos actualizados y recursos esenciales para navegar un nuevo entorno con confianza y facilidad",
+        "viewAll": "Ver todos los blogs",
+        "categories": {
+          "visaPolicy": "Visas y Políticas",
+          "usLivingGuide": "Guía de Vida en EE.UU.",
+          "careerCompass": "Brújula Profesional",
+          "healthWellness": "Salud y Bienestar",
+          "communityStory": "Historia de la Comunidad"
+        },
+        "mustRead": "Artículos Imprescindibles"
+      },
+      "supportUs": {
+        "title": "Apóyanos",
+        "becomeMember": "Hazte Miembro",
+        "membershipDescription": "Celebra, empodera e inspira a otros a tomar la iniciativa y hacer la diferencia."
+      }
+    }
+}
