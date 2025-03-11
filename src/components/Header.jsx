@@ -10,7 +10,7 @@ import DropdownIcon from "../assets/icon-logo/dropdown-icon.svg"
 
 
 import AuthModal from "./AuthModal"
-import LanguageBtn from "./LanguageBtn";
+import LanguageBtn from "./languageBtn";
 
 function Header ({ profile }) {
   const navigate = useNavigate()
