@@ -55,13 +55,13 @@ function Header ({ profile }) {
   // --------------- End Auth Modal State Management ---------------
   const menuItems = [
     {
-      name: t("nav.support"), // 🔴 CHANGE HERE
+      name: t("nav.support.buttonText"), // 🔴 CHANGE HERE
       path: "/support",
       subMenu: [
-        { name: "Language Support", path: "/support/english-support" },
-        { name: "Career Compass", path: "/support/career-compass" },
-        { name: "Legal Consulting", path: "/support/legal-consulting" },
-        { name: "Mental Health Conseling", path: "/support/mental-health" },
+        { name: t("nav.support.dropdown1"), path: "/support/english-support" },
+        { name: t("nav.support.dropdown2"), path: "/support/career-compass" },
+        { name: t("nav.support.dropdown3"), path: "/support/legal-consulting" },
+        { name: t("nav.support.dropdown4"), path: "/support/mental-health" },
       ],
     },
     { name: t("nav.blogs"), path: "/blogs" }, // 🔴 CHANGE HERE

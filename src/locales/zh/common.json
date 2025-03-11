@@ -1,35 +1,43 @@
 {
-    "footer": {
-      "nonProfit": "501(c)3 非营利组织",
-      "resources": "资源",
-      "supportUs": "支持我们",
-      "info": "信息",
-      "languageSupport": "语言支持",
-      "legalConsulting": "法律咨询",
-      "mentalHealth": "心理健康",
-      "blogs": "博客",
-      "events": "活动",
-      "donate": "捐款",
-      "volunteer": "志愿者",
-      "partnership": "合作伙伴",
-      "about": "关于我们",
-      "contact": "联系我们",
-      "community": "社区",
-      "newsletter": "订阅我们的通讯",
-      "subscribe": "订阅",
-      "privacyPolicy": "隐私政策",
-      "termsOfUse": "客户使用条款",
-      "accessibility": "数字可访问性声明",
-      "copyright": "© WE INDEPENDENT 2025"
+  "footer": {
+    "nonProfit": "501(c)3 非营利组织",
+    "resources": "资源",
+    "supportUs": "支持我们",
+    "info": "信息",
+    "languageSupport": "语言支持",
+    "legalConsulting": "法律咨询",
+    "mentalHealth": "心理健康咨询",
+    "blogs": "博客",
+    "events": "活动",
+    "donate": "捐款",
+    "volunteer": "志愿者",
+    "partnership": "合作伙伴",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "community": "社区",
+    "newsletter": "订阅我们的通讯",
+    "subscribe": "订阅",
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "客户使用条款",
+    "accessibility": "数字可访问性声明",
+    "copyright": "© WE INDEPENDENT 2025"
+  },
+  "nav": {
+    "home": "首页",
+    "events": "活动",
+    "addEvents": "添加活动",
+    "blogs": "博客",
+    "about": "关于我们",
+    "profile": "个人资料",
+    "donate": "捐赠",
+    "support": {
+      "buttonText": "支持计划",
+      "dropdown1": "语言支持",
+      "dropdown2": "职业导航",
+      "dropdown3": "法律咨询",
+      "dropdown4": "心理健康咨询"
     },
-    "nav": {
-      "home": "首页",
-      "events": "活动",
-      "addEvents": "添加活动",
-      "blogs": "博客",
-      "about": "关于",
-      "profile": "个人资料",
-      "donate": "捐赠"
-    }
-
+    "login":"登录",
+    "signUp":"注册"
   }
+}

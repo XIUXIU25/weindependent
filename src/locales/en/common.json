@@ -29,6 +29,16 @@
       "blogs": "Blogs",
       "about": "About",
       "profile": "Profile",
-      "donate": "Donate"
+      "donate": "Donate",
+      "support":{
+        "buttonText":"Support Programs",
+        "dropdown1":"Language Support",
+        "dropdown2":"Career Compass",
+        "dropdown3":"Legal Consulting",
+        "dropdown4":"Mental Wellbeing Conseling"
+
+      },
+      "login":"Login",
+      "signUp":"Sign up"
     }
   }
